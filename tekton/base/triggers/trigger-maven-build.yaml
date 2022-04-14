@@ -56,7 +56,7 @@ kind: EventListener
 metadata:
   name: maven-build-event-listener
 spec:
-  serviceAccountName: service-tekton-triggers-sa
+  serviceAccountName: pipeline
   triggers:
     - name: github-listener
       interceptors:
