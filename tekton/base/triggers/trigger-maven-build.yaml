@@ -80,7 +80,7 @@ spec:
   params:
   - name: gitrevision
     value: $(body.head_commit.id)
-  - name: gitrepositoryurl
+  - name: repoUrl
     value: $(body.repository.url)
   - name: contenttype
     value: $(header.Content-Type)
