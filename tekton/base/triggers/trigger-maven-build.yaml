@@ -21,7 +21,7 @@ spec:
       generateName: maven-build-run-
     spec:
       pipelineRef:
-        name: p-maven-build
+        name: p-mvn-build
       params:
       - name: appName
         value: $(tt.params.appName)
@@ -68,9 +68,9 @@ spec:
               - pull_request
               - push
       bindings:
-        - ref: build-push-image-pipeline-binding
+        - ref: maven-build-trigger-binding
       template:
-        ref: build-push-image-template
+        ref: maven-build-trigger
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
