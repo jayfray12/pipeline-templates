@@ -78,8 +78,8 @@ metadata:
   name: maven-build-trigger-binding
 spec:
   params:
-  - name: gitrevision
-    value: $(body.head_commit.id)
+  - name: branchName
+    value: $(body.ref)
   - name: repoUrl
     value: $(body.repository.url)
   - name: contenttype
